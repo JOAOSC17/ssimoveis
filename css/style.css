@@ -1,0 +1,161 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    font-size: 16px;
+    overflow-x: hidden;
+}
+body{
+    background-color: #F2F2F2;
+    height: 100vh;
+}
+a{
+    color: inherit;
+    text-decoration: none;
+}
+.header{
+    height: 500px;
+}
+.navigation {
+    display: flex;
+    align-items: center;
+    line-height: 50px;
+    justify-content: space-between;
+    -webkit-box-shadow: 0px 5px 18px -1px rgba(0,0,0,0.51); 
+    box-shadow: 0px 5px 18px -1px rgba(0,0,0,0.51);
+}
+.navigation-title{
+    margin-left: 20px;
+}
+.navigation-title a{
+    font-size: 2rem;
+    padding-left: 5px;
+}
+.container-navigation{
+    width: 200px;
+}
+.nav-links{
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+.banner{
+    display: flex;
+    align-items: flex-end;
+    width: 400px;
+}
+.banner img {
+    width: 100%;
+    object-fit: cover;
+    object-position: bottom;
+}
+.about{
+    width: 100vw;
+    background-color: white;
+}
+.contact{
+    width: 100vw;
+    color: white;
+    background-color: rgb(32 0 111);
+}
+.call-to-whats{
+    color: white;
+    font-size: 2rem;
+    position: absolute;
+    right: 18px;
+    bottom: 8px;
+    width: 5rem;
+    height: 5rem;
+    background: #00ad00;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.menu {
+    display: none;
+    margin-top: 5px;
+    margin-right: 10px;
+  }
+  
+  .menu:hover {
+    cursor: pointer;
+    transform: scale(.97)
+  }
+  
+  .menu > .line {
+    position: relative;
+    width: 2.25rem;
+    height: 0.3rem;
+    border-radius: 50px;
+    background: black;
+  }
+  
+  .line.a {
+    --translate: .60rem;
+    --rotation: 45deg;
+  }
+  .line.b {
+    --translate: 0px;
+    --rotation: 45deg;
+  }
+  .line.c {
+    --translate: -.60rem;
+    --rotation: -45deg;
+  }
+  
+  @keyframes turn-x {
+    from {
+      top: initial;
+      bottom: initial;
+    }
+    50% {
+      transform: translateY(var(--translate));
+    }
+    to {
+      transform: translateY(var(--translate)) rotate(var(--rotation));
+    }
+  }
+  @keyframes turn-y {
+     from {
+      top: initial;
+      bottom: initial;
+    }
+    50% {
+      transform: translateY(var(--translate));
+    }
+    to {
+      transform: translateY(var(--translate)) rotate(var(--rotation));
+    }
+  }
+.call-to-whats .fa-whatsapp:before {
+    font-size: 3.8rem;
+}
+.fa-house:before {
+    font-size: 2rem;
+}
+@media screen and (max-width:500px) {
+    *{
+        font-size: 14px;
+    }    
+}
+@media screen and (max-width:470px) {
+    *{
+        font-size: 14px;
+    }  
+    .menu{
+        display: grid;
+        gap: .5rem;
+        transition: transform .3s ease;
+    }
+    .container-navigation{
+        display: none;
+        width: 0px;
+    }
+}
